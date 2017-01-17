@@ -4,7 +4,8 @@
   "description": "Beginners tutorial for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha",
+    "posttest": "eslint index.js app.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,10 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "supertest": "^2.0.1"
   }
 }
