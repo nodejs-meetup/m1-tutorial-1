@@ -1,0 +1,30 @@
+{
+  "name": "1-tutorial",
+  "version": "1.0.0",
+  "description": "Beginners tutorial for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/nodejs-meetup/1-tutorial.git"
+  },
+  "keywords": [
+    "rest",
+    "tutorial"
+  ],
+  "author": "c_wolf <christian.wolf1@arvato.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/nodejs-meetup/1-tutorial/issues"
+  },
+  "homepage": "https://gitlab.com/nodejs-meetup/1-tutorial#README",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "supertest": "^2.0.1"
+  }
+}
