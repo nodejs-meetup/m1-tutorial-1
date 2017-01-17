@@ -38,4 +38,13 @@ describe('restApi:', () => {
       done()
     })
   })
+
+  it('should get members', (done) => {
+    request(app)
+    .get('/members')
+    .end((err, res) => {
+      assert.deepEqual(res.body, [], 'should return members')
+      done()
+    })
+  })
 })
