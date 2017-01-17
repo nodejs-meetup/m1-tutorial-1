@@ -4,7 +4,7 @@ This is a Node.js beginners tutorial. This project contains the implementation o
 
 ## Prerequisites
 
-* Node.js: ^6.9.1 (e.g. with Node Version Manager)
+* Node.js: 6.9.1 or higher (e.g. with Node Version Manager)
 
 for installation visit:
 
