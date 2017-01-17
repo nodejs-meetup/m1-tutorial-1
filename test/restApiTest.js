@@ -22,4 +22,20 @@ describe('restApi:', () => {
       done()
     })
   })
+
+  it('should return 500 if error occurs', (done) => {
+    let app = express()
+    app.use((req, res, next) => {
+      next(new Error('test'))
+    })
+    restApi(app)
+    request(app)
+    .get('/')
+    .end((err, res) => {
+      assert.ifError(err)
+      assert.equal(res.status, 500, 'status should be 500')
+      assert.deepEqual(res.body, {error: 'Internal Server Error'})
+      done()
+    })
+  })
 })
