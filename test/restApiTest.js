@@ -43,7 +43,19 @@ describe('restApi:', () => {
     request(app)
     .get('/members')
     .end((err, res) => {
+      assert.ifError(err)
       assert.deepEqual(res.body, [], 'should return members')
+      done()
+    })
+  })
+
+  it('should create a member', (done) => {
+    request(app)
+    .post('/members')
+    .send({test: 'test'})
+    .end((err, res) => {
+      assert.ifError(err)
+      assert.deepEqual(res.body, {test: 'test'}, 'should create a member')
       done()
     })
   })
