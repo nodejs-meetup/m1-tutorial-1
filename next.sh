@@ -6,7 +6,7 @@ branch_name=${branch_name##refs/heads/}
 echo $branch_name
 if [ "$branch_name" == "master" ]
 then
-  next_branch_name=1
+  next_branch_name=0
 else
   next_branch_name="$((branch_name + 1))"  	
 fi
